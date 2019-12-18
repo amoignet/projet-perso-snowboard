@@ -1,0 +1,16 @@
+<div class="head">
+  <h1 >  {{ "Le Snow c'est Fun" | uppercase }}</h1>
+</div>
+<div class="list">
+  <div class="boardlist">
+    <div *ngFor="let board of boardList" (click)="boardClicked(board)">
+      <h2>Marque: {{ board.brand }}</h2>
+      <h2>Modèle: {{ board.model }}</h2>
+      <h2>Prix: {{ board.price }} €</h2>
+      <img src="{{ board.image }}" />
+    </div>
+  </div>
+  <button [routerLink]="['/create']" routerLinkActive="router-link-active">
+    Go to create Boards
+  </button>
+</div>
